@@ -5,7 +5,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
     const response = await fetch("/data/products.json");
     return await response.json();
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error fetching products:", error);
     return [];
   }
 };
