@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useProducts } from "./hooks/useProducts";
+import ProductGrid from "./components/ProductGrid";
+import FiltersComponent from "./components/Filters";
+import { Container } from "@mui/material";
+import SortOptions from "./components/SortOptions";
 
-const App: React.FC = () => {
-    return <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>;
+function App() {
+  const { filteredProducts, setFilters, setSortOrder } = useProducts();
+
+  return (
+    <Container>
+      <h1>Products</h1>
+      <FiltersComponent filters={{ material: "", category: "", color: "", type: "" }} setFilters={setFilters} />
+      <SortOptions setSortOrder={setSortOrder}/>
+      <ProductGrid products={filteredProducts} />
+    </Container>
+  );
 }
 
 export default App;
