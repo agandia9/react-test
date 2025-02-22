@@ -23,3 +23,14 @@ Design is open. Choose whatever fits you best for the styles and feel free to ch
 - [OPTIONAL] You should implement sorting by size:
   - It should sort items by size asc
   - It should sort items by size desc
+
+
+______________________________________________
+
+Next steps:
+
+- Adding multilang
+- Adding testing (unit & e2e)
+- Improve mobile responsive
+- Improve design (general)
+- Use of SASS when growing in terms of styling
