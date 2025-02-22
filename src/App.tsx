@@ -1,16 +1,17 @@
 import { useProducts } from "./hooks/useProducts";
-import ProductGrid from "./components/ProductGrid";
-import FiltersComponent from "./components/Filters";
+import ProductGrid from "./components/ProductGrid/ProductGrid";
+import FiltersComponent from "./components/Filters/Filters";
 import { Container } from "@mui/material";
-import SortOptions from "./components/SortOptions";
+import SortOptions from "./components/SortOptions/SortOptions";
+import "./App.css"
 
 function App() {
-  const { filteredProducts, setFilters, setSortOrder } = useProducts();
+  const { filteredProducts, setFilters, setSortOrder, filters } = useProducts();
 
   return (
-    <Container>
-      <h1>Products</h1>
-      <FiltersComponent filters={{ material: "", category: "", color: "", type: "" }} setFilters={setFilters} />
+    <Container className="MainContainer" maxWidth={false}>
+      <h1 className="MainContainer__Title">Products</h1>
+      <FiltersComponent filters={filters} setFilters={setFilters} />
       <SortOptions setSortOrder={setSortOrder}/>
       <ProductGrid products={filteredProducts} />
     </Container>
