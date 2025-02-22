@@ -33,4 +33,4 @@ Next steps:
 - Adding testing (unit & e2e)
 - Improve mobile responsive
 - Improve design (general)
-- Use of SASS when growing in terms of styling
+- Use of SASS when growing in terms of styling (Use of BEM but without SASS implementation, loose sense)

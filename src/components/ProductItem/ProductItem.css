@@ -1,0 +1,14 @@
+.ProductItem__InfoSection {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ProductItem__ExtraInfo {
+    > p {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }    
+}
