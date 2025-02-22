@@ -1,0 +1,5 @@
+.ProductGrid__Container {
+    height: 65vh;
+    overflow: auto;
+    margin-top: 0px !important;
+}
