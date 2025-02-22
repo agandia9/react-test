@@ -1,1 +1,5 @@
-export type SortOrder = "asc" | "desc" | null
+export enum SortOrder {
+  ASC = "asc",
+  DESC = "desc",
+  NONE = "none",
+}
